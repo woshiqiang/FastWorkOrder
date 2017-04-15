@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">快工单2</string>
+    <string name="address_book">通讯录</string>
+    <string name="cloud_app">云应用</string>
+    <string name="more">更多</string>
+    <string name="remember_password">记住密码</string>
+    <string name="login">登\t录</string>
+    <string name="send_order">派单</string>
+    <string name="user_type">客户类型：</string>
+    <string name="user_name">客户姓名：</string>
+    <string name="user_sex">性别：</string>
+    <string name="sex_male">男</string>
+    <string name="sex_female">女</string>
+    <string name="phone_number">手机号码：</string>
+    <string name="home_phone">家庭电话：</string>
+    <string-array name="array_custom">
+        <item>c语言</item>
+        <item>java </item>
+        <item>php</item>
+        <item>xml</item>
+        <item>html</item>
+    </string-array>
+</resources>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_open_account_entry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical"
+    tools:context="com.hbck.fastworkorder.ui.activity.OpenAccountEntryActivity">
+
+    <include layout="@layout/include_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/common_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_box_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/common_padding">
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="@string/user_type" />
+
+                    <Spinner
+                        android:id="@+id/spinner_user_type"
+                        style="@style/MySpinnerStyle"
+                        android:entries="@array/array_custom" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="@string/user_name" />
+
+                    <EditText
+                        android:id="@+id/et_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:maxLength="12"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="@string/user_sex" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checkedButton="@+id/male"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="@string/sex_male"
+                            android:textColor="@color/text_color" />
+
+                        <RadioButton
+                            android:id="@+id/rb_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:layout_weight="1"
+                            android:text="@string/sex_female"
+                            android:textColor="@color/text_color" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="@string/phone_number" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="@string/home_phone" />
+
+                    <EditText
+                        android:id="@+id/et_home_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="身份证号：" />
+
+                    <EditText
+                        android:id="@+id/et_id_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="小区名称：" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_community"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:completionThreshold="1"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/details_bg"
+                        android:singleLine="true"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="详细地址：" />
+
+                    <EditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding"
+                android:background="@drawable/input_box_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/common_padding">
+
+
+                <include layout="@layout/include_package" />
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="套餐名称：" />
+
+                    <Spinner
+                        android:id="@+id/spinner_package"
+                        style="@style/MySpinnerStyle" />
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#f00"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="预装时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_view"
+                        android:drawableLeft="@mipmap/yuzhuang_time"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="@dimen/common_padding"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="增值类型：" />
+
+                    <Spinner
+                        android:id="@+id/spinner_value_types"
+                        style="@style/MySpinnerStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="增值费：" />
+
+                    <EditText
+                        android:id="@+id/et_ValueAddFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="@dimen/common_padding"
+                android:background="@drawable/input_box_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/common_padding">
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="装维人员：" />
+
+                    <Spinner
+                        android:id="@+id/yz_per_entry"
+                        style="@style/MySpinnerStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_zhuangwei"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="指定装维：" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_zhuangwei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:completionThreshold="1"
+                        android:drawablePadding="10dp"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="发展人：" />
+
+                    <EditText
+                        android:id="@+id/dev_per_entry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/details_bg"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="是否跨区：" />
+
+                    <RadioGroup
+                        android:id="@+id/interregional_entry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checkedButton="@+id/no"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="否"
+                            android:textColor="@color/text_color" />
+
+                        <RadioButton
+                            android:id="@+id/rb_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24dp"
+                            android:layout_weight="1"
+                            android:text="是"
+                            android:textColor="@color/text_color" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="客户来源" />
+
+                    <Spinner
+                        android:id="@+id/spinner_source"
+                        style="@style/MySpinnerStyle" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/include_custom_from"
+                    layout="@layout/include_custom_from" />
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:drawableLeft="@mipmap/xing"
+                        android:text="获取方式" />
+
+                    <Spinner
+                        android:id="@+id/spinner_source_advertise"
+                        style="@style/MySpinnerStyle" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/MyLLStyle">
+
+                    <TextView
+                        style="@style/TextLeftStyle"
+                        android:text="备   注" />
+
+                    <EditText
+                        android:id="@+id/et_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_selector"
+                        android:gravity="top"
+                        android:padding="3dp"
+                        android:textColor="@color/edittext_color" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

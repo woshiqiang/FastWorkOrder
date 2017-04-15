@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fe6400</color>
+    <color name="colorPrimaryDark">#fe6400</color>
+    <color name="colorAccent">#fe6400</color>
+    <color name="theme_color_orange">#fe6400</color>
+    <color name="divider_list">#d4d4d4</color>
+    <color name="line" >#D3DDE6</color>
+    <color name="common_text_gray">#A0A0A0</color>
+    <color name="window_bg">#f3f3f3</color>
+    <color name="text_color">#333333</color>
+    <color name="textColorHint">#999999</color>
+    <color name="edittext_color">#999999</color>
+    <color name="title_top">#f3f3f3</color>
+
+</resources>

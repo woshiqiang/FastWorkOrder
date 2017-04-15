@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hbck.fastworkorder.ui.widget.DrawableCenterEditText
+        android:id="@+id/friend_et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/near_search_selector"
+        android:drawableLeft="@mipmap/search_small"
+        android:drawablePadding="6dp"
+        android:hint="搜索"
+        android:padding="3dp"
+        android:singleLine="true"
+        android:textColorHint="#A0A0A0"
+        android:textSize="13dp" />
+
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <com.hbck.fastworkorder.ui.widget.EaseContactList
+            android:id="@+id/contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!-- hyphenate:ctsListInitialLetterBg="#abc" -->
+        <LinearLayout
+            android:id="@+id/ll_net_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/common_padding"
+                android:drawableTop="@mipmap/net_error"
+                android:text="重新获取" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

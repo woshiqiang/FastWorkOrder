@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/main_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/theme_color_orange"
+        android:gravity="center"
+        android:text="@string/cloud_app"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e0e0e0" />
+
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/rb_contact_selector"
+            android:gravity="center"
+            android:text="@string/address_book"
+            android:textColor="@drawable/rb_text_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_desk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/rb_desk_selector"
+            android:gravity="center"
+            android:text="@string/cloud_app"
+            android:textColor="@drawable/rb_text_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/rb_more_selector"
+            android:gravity="center"
+            android:text="@string/more"
+            android:textColor="@drawable/rb_text_selector" />
+
+    </RadioGroup>
+
+
+</LinearLayout>
